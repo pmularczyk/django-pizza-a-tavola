@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #000000;
+}
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1020px;
+    margin: 0 auto;
+    border: 2px solid magenta;
+}
+
+.contact-form {
+    margin-top: 78px;
+}
+.success-message {
+    margin-top: 78px;
+}
+.menu {
+    margin-top: 78px;
+}
+/* Navbar */
+#navigation nav {
+    padding-right: 0;
+    padding-left: 0;
+}
+#navigation .navbar-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    font-weight: 500;
+    margin-left: 32px;
+}
+/* Home */
+#home {
+    margin-top: 78px;
+}
+/* Footer */
+#footer .container {
+    padding: 3% 5%;
+}
+#footer .social {
+    float: right;
+    display: inline;
+    padding: 0% 3%
+}
+#footer .social a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+#footer .back-home {
+    float: right;
+}
+
+@media (max-width: 992px) {
+    body {
+        text-align: center;
+    }
+
+    nav.navbar {
+        text-align: left;
+    }
+    .nav-link {
+        margin-left: 32px;
+    }
+    /* Footer */
+    #footer .social {
+        float: none;
+        display: inline;
+        padding: 0% 3%
+    }
+    #footer .back-home {
+        float: none;
+    }
+}

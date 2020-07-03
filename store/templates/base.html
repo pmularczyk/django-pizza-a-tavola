@@ -1,13 +1,89 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Own CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'pizzapp/css/styles.css' %}" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <script src="https://use.fontawesome.com/85c7ce4f8f.js"></script>
+
+    <title>Pizza á tavola</title>
+  </head>
+  <body>
+    {% include 'partials/nav.html' %}
+
     {% block content %} {% endblock %}
 
-</body>
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6">
+            <h4>&copy; 2020 Pizza á tavola</h4>
+            </div>
+
+            <div class="col-lg-6">
+            <div class="social"><a data-target="twitter" target="_blank"
+                href="http://twitter.com/intent/tweet?text=Ich%20m%C3%B6chte%20diese%20gro%C3%9Fartige%20Website%20mit%20Ihnen%20teilen&url=https://www.pizza-a-tavola.de/">
+                <span><i class="fa fa-twitter-square" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="social"> <a data-target="whatsapp" target="_blank"
+                href="https://api.whatsapp.com/send?text=Ich möchte diese großartige Website mit Ihnen teilen. https%3A%2F%2Fwww.pizza-a-tavola.de">
+                <span><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="social"><a href="https://facebook.com/pizza-a-tavola" target="_blank" dmle_dont_remove="target"
+                dm_dont_rewrite_url="true">
+                <span><i class="fa fa-facebook-official" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="social"> <a href="https://instagram.com/pizza-a-tavola" target="_blank" dmle_dont_remove="target"
+                dm_dont_rewrite_url="true">
+                <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                </a>
+            </div>
+            <div class="social"> <a href="mailto:info@pizza-a-tavola.de" dmle_dont_remove="target"
+                dm_dont_rewrite_url="true">
+                <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                </a>
+            </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-6">
+            <p><a href="#">Impressum</a> &middot; <a href="#">Datenschutz</a>
+            </p>
+            </div>
+
+            <div class="col-lg-6">
+            <p class="back-home"><a href="#">Back to top</a></p>
+            </div>
+        </div>
+
+        </div>
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
 </html>

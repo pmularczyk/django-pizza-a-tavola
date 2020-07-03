@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for pizza in pizzas %}
+<div class="container menu">
+    <div>
+        <p>{{ pizza.name }} - {{ pizza.size }}</p>
+    </div>
+</div>
+
+
+
+{% endfor %}
+
+
+{% endblock %}
