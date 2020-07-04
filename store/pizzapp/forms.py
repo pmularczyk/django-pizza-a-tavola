@@ -1,4 +1,5 @@
 from django import forms
+from .models import Order
 
 class ContactForm(forms.Form):
     name = forms.CharField(label='Name', max_length=100)
@@ -8,3 +9,8 @@ class ContactForm(forms.Form):
     time = forms.TimeField(label='Uhrzeit', widget=forms.TextInput(attrs={'type': 'time'}))
     guests = forms.IntegerField(label='Personenanzahl',min_value=1, max_value=100)
     message = forms.CharField(label='Ihre Nachricht', widget=forms.Textarea, required=False)
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ('name', 'email', 'phone_number',)
