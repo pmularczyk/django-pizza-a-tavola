@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container menu">
+
+    <h1>{{ object.name }}</h1>
+    <img
+        class="rounded-circle article-img"
+        src="{{ object.image.url }}"
+    />
+    <form method="POST" >
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form|crispy }}
+        </fieldset>
+
+        <fieldset class="form-group">
+            <div id="div_id_pizza" class="form-group">
+                <label for="id_pizza" class=" requiredField">Pizza
+                    <span class="asteriskField">*</span>
+                </label>
+                <div class="">
+                    <input type="text" name="pizza" value="{{ object.name }}" maxlength="128" class="textinput textInput form-control" required="" id="id_pizza">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <div>
+                <label for="id_size" class=" requiredField">Size
+                    <span class="asteriskField">*</span>
+                </label>
+                <select class="form-control" name="size">
+                    {% for item in object.variation_set.sizes %}
+                        <option value="{{ item.title|lower }}">{{ item.title|capfirst }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </fieldset>
+
+
+        <div class="form-group">
+            <button class="btn btn-outline-info btn-lg btn-block" type="submit">Jetzt bestellen</button>
+        </div>
+    </form>
+
+</div>
+{% endblock %}
