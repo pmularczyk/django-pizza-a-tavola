@@ -1,18 +1,35 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import send_mail, BadHeaderError
-from django.views.generic import ListView
+from django.views.generic import DetailView, ListView, CreateView
+from django.views.generic.edit import FormMixin
 
-from .forms import ContactForm
-from .models import Pizza
+from .forms import ContactForm, OrderForm
+from .models import Order, Pizza, Variation
 
 def home(request):
     return render(request, 'pizzapp/home.html', {})
+
 
 class PizzaView(ListView):
     model = Pizza
     context_object_name = 'pizzas'
     queryset = Pizza.objects.all()
+
+class OrderListView(ListView):
+    model = Order
+    context_object_name = 'orders'
+    queryset = Order.objects.all()
+
+
+def order_pizza(request, slug):
+    form = OrderForm()
+    pizza = get_object_or_404(Pizza, slug=slug)
+    template = 'pizzapp/pizza_detail.html'
+    if request.method == 'POST':
+        form = ContactForm(request.POST or None)
+        print(form)
+    return render(request, template, {'form': form})
 
 def contact(request):
     form = ContactForm()
@@ -33,8 +50,9 @@ def contact(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
-    return render(request, "pizzapp/contact.html", {'form': form})
+    return render(request, 'pizzapp/contact.html', {'form': form})
+
 
 def success(request):
-    return render(request, "pizzapp/success.html")
+    return render(request, 'pizzapp/success.html')
 
