@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 django-crispy-forms = "*"
 django-phonenumber-field = {extras = ["phonenumberslite"],version = "*"}
+pillow = "*"
 
 [requires]
 python_version = "3.7"
