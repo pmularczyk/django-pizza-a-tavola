@@ -1,9 +1,23 @@
 {% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
 {% block content %}
+
+
 <div class="container content-body">
+
+  <h1>Suche für Bestellungen</h1>
+  <form method="GET">
+    {{ filter.form|crispy }}
+    <div class="form-group">
+      <button class="btn btn-outline-info btn-lg btn-block" type="submit">Suche</button>
+    </div>
+  </form>
+
   <h1>Bestellungen</h1>
   <div class="row">
-    {% for order in orders %}
+    {% for order in filter.qs %}
     <div class="col-lg-4">
       <ul class="list-group">
         <li class="list-group-item active">Name: {{ order.name }}</li>
