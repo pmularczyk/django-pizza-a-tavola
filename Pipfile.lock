@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f3db8a48facdc850a858484c94e3160ddeebd7d633fff42262317ebad5e862ff"
+            "sha256": "eaf985fdc6308cd7e6799f974ca88e023849382624417a64291fc693449c7b50"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.7"
+            "python_version": "3.8"
         },
         "sources": [
             {
@@ -21,6 +21,7 @@
                 "sha256:7e51911ee147dd685c3c8b805c0ad0cb58d360987b56953878f8c06d2d1c6f1a",
                 "sha256:9fc6fb5d39b8af147ba40765234fa822b39818b12cc80b35ad9b0cef3a476aed"
             ],
+            "index": "pypi",
             "version": "==3.2.10"
         },
         "babel": {
@@ -28,6 +29,7 @@
                 "sha256:1aac2ae2d0d8ea368fa90906567f5c08463d98ade155c0c4bfedd6a0f7160e38",
                 "sha256:d670ea0b10f8b723672d3a6abeb87b565b244da220d76b4dba1b66269ec152d4"
             ],
+            "index": "pypi",
             "version": "==2.8.0"
         },
         "django": {
@@ -55,9 +57,6 @@
             "version": "==2.3.0"
         },
         "django-phonenumber-field": {
-            "extras": [
-                "phonenumberslite"
-            ],
             "hashes": [
                 "sha256:2ca3bb0ada0ebc164bd903a981a34f1202a4294006e520b0da961bd7ce9f20a4",
                 "sha256:d4580cc3352f4433962825f9927e6669852c1b40ec484fcb5a74064dabc1201a"
@@ -70,6 +69,7 @@
                 "sha256:19c8f083676061ca5848104aaecfd0d6378d1fc9b37d3777a8636fce05bca6d1",
                 "sha256:f898bff9cb2fe6a0f6e6d6d8d27e550acf77af4cf20ec22f4f02c0a399ae6f39"
             ],
+            "index": "pypi",
             "version": "==8.12.6"
         },
         "pillow": {
@@ -109,6 +109,7 @@
                 "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed",
                 "sha256:c35965d010ce31b23eeb663ed3cc8c906275d6be1a34393a1d73a41febf4a048"
             ],
+            "index": "pypi",
             "version": "==2020.1"
         },
         "sqlparse": {
@@ -116,6 +117,7 @@
                 "sha256:022fb9c87b524d1f7862b3037e541f68597a730a8843245c349fc93e1643dc4e",
                 "sha256:e162203737712307dfe78860cc56c8da8a852ab2ee33750e33aeadf38d12c548"
             ],
+            "index": "pypi",
             "version": "==0.3.1"
         }
     },
