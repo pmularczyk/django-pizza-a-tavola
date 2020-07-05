@@ -2,8 +2,18 @@
 {% load static %}
 {% block content %}
 <section id="home">
-    <div class="container">
-        <h1>Homepage</h1>
+    <div class="container content-body">
+
+    <div class="jumbotron">
+        <h1 class="display-4">Herzlich Willkommen!</h1>
+        <p class="lead">A Tavola präsentiert Ihnen feine Spezialitäten aus der gehobenen italienischen Küche.</p>
+        <hr class="my-4">
+        <p>
+            A Tavola lädt Sie zu einer erlebnisreichen und kulinarischen Reise in die italienische Küche in Beispiel Str. in Berlin-Bezirk ein. Lassen Sie sich von der Vielfalt der anspruchsvollen Küche Italiens verwöhnen. Sämtliche Gerichte werden nach traditionellen Rezepten und stets frisch für Sie zubereitet.
+        </p>
+        <a class="btn btn-primary btn-lg" href="{% url 'menu' %}" role="button">Speisekarte</a>
+        </div>
+
     </div>
 </section>
 {% endblock %}

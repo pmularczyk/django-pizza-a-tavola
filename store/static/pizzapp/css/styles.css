@@ -9,22 +9,12 @@ body {
     width: 90%;
     max-width: 1020px;
     margin: 0 auto;
-    border: 2px solid magenta;
+    /* border: 2px solid magenta; */
 }
-
-.contact-form {
-    margin-top: 78px;
-}
-.success-message {
-    margin-top: 78px;
-}
-.menu {
+.content-body {
     margin-top: 78px;
 }
 
-.order {
-    margin-top: 78px;
-}
 /* Navbar */
 #navigation nav {
     padding-right: 0;
@@ -68,6 +58,7 @@ body {
     .nav-link {
         margin-left: 32px;
     }
+
     /* Footer */
     #footer .social {
         float: none;
@@ -76,5 +67,12 @@ body {
     }
     #footer .back-home {
         float: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-card {
+        margin: auto;
+        width: 50%;
     }
 }

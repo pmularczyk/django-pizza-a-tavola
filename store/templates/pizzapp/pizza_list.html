@@ -1,30 +1,25 @@
 {% extends "base.html" %} {% block content %}
-<div class="container menu">
-  <div class="row">
-    {% for pizza in pizzas %}
-    <div class="col-lg-4">
-      <div class="card" style="width: 18rem;">
-        <img
-          src="{{ pizza.image.url }}"
-          class="card-img-top rounded-circle article-img"
-          alt="Image of a delicious Pizza"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ pizza.name }}</h5>
-          <p class="card-text">{{ pizza.description }}</p>
-
-          <!-- <select class="form-control" name="size">
-            {% for item in pizza.variation_set.sizes %}
-                <option value="{{ item.title|lower }}">{{ item.title|capfirst }}</option>
-            {% endfor %}
-          </select> -->
-
-          <a href="{% url 'menu-detail' pizza.slug %} " class="btn btn-primary">Order</a>
+<div class="container content-body">
+  <div class="menu-card">
+    <div class="row">
+      {% for pizza in pizzas %}
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card" style="width: 18rem;">
+          <img
+            src="{{ pizza.image.url }}"
+            class="card-img-top rounded-circle article-img"
+            alt="Image of a delicious Pizza"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ pizza.title }}</h5>
+            <p class="card-text">Größe: {{ pizza.size }}</p>
+            <a href="{% url 'menu-detail' pizza.slug %} " class="btn btn-primary">Bestellen</a>
+          </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-
   </div>
+
 </div>
 {% endblock %}

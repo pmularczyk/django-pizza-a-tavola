@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container success-message">
+<div class="container content-body">
     <div class="alert alert-info">
-        Your Reservation has been sent
+        Ihre Bestellung wurde erfolgreich entgegen genommen! <br>
+        vielen Dank
     </div>
-    <a href="{% url 'home' %}">Back to Homepage</a>
+    <a href="{% url 'home' %}">Zurück zur Homepage</a>
 </div>
 {% endblock content %}
