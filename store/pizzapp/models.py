@@ -5,14 +5,26 @@ from phonenumber_field.modelfields import PhoneNumberField
 from PIL import Image
 
 
+SIZES_CHOICES = (
+    ('S', 'SMALL'),
+    ('M', 'MEDIUM'),
+    ('L', 'LARGE'),
+)
+
+TITLE_CHOICES = (
+    ('Margherita', 'Margherita'),
+    ('Salami', 'Salami'),
+    ('Diavolo', 'Diavolo'),
+)
+
 class Pizza(models.Model):
-    name        = models.CharField(max_length=30)
+    title       = models.CharField(max_length=30, choices=TITLE_CHOICES)
+    size        = models.CharField(max_length=1, choices=SIZES_CHOICES)
     slug        = models.SlugField(unique=True)
-    description = models.TextField(max_length=240, default="Pizza description")
     image       = models.ImageField(default='default.png', upload_to='pizza_img')
 
     def __str__(self):
-        return self.name
+        return f'{self.title}: {self.size}'
 
     def get_absolute_url(self):
         return reverse('menu-detail', kwargs={'slug': self.slug})
@@ -27,45 +39,12 @@ class Pizza(models.Model):
             img.save(self.image.path)
 
 
-class VariationManager(models.Manager):
-    def all(self):
-        return super().filter(active=True)
-
-    def sizes(self):
-        return self.all().filter(category='size')
-
-
-VARIATION_CATEGORIES = (
-    ('size', 'size'),
-)
-
-SIZES_CHOICES = (
-    ('S', 'SMALL'),
-    ('M', 'MEDIUM'),
-    ('L', 'LARGE'),
-)
-
-class Variation(models.Model):
-    pizza       = models.ForeignKey(Pizza, on_delete=models.CASCADE)
-    category    = models.CharField(
-        max_length=20,
-        choices=VARIATION_CATEGORIES,
-        default='size'
-    )
-    title       = models.CharField(max_length=20, choices=SIZES_CHOICES)
-    active      = models.BooleanField(default=True)
-
-    objects     = VariationManager()
-
-    def __str__(self):
-        return f'{self.pizza}: {self.title}'
-
-
 class Order(models.Model):
     name            = models.CharField(max_length=120)
     email           = models.EmailField()
     phone_number    = PhoneNumberField()
-    variation       = models.ForeignKey(Variation, on_delete=models.CASCADE)
+    pizza           = models.CharField(max_length=30)
+    size            = models.CharField(max_length=1)
 
     def __str__(self):
-        return f'{self.name}: {self.variation}'
+        return f'{self.name}: {self.pizza} - {self.size}'
