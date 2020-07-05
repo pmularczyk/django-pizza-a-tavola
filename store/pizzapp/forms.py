@@ -9,5 +9,5 @@ class OrderForm(forms.ModelForm):
        self.fields['size'].widget.attrs['readonly'] = True
 
     class Meta:
-        model = Order
-        fields = ('name', 'email', 'phone_number', 'pizza', 'size')
+        model   = Order
+        fields  = ('name', 'email', 'phone_number', 'pizza', 'size')
