@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Alexander",
+        "email": "alexander@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Salami",
+        "size": "L"
+    },
+    {
+        "name": "Kiara",
+        "email": "kiara@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Margherita",
+        "size": "M"
+    },
+    {
+        "name": "Angelina",
+        "email": "angelina@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Diavolo",
+        "size": "S"
+    },
+    {
+        "name": "Saskia",
+        "email": "saskia@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Salami",
+        "size": "S"
+    },
+    {
+        "name": "Julian",
+        "email": "julian@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Salami",
+        "size": "M"
+    },
+    {
+        "name": "Franziska",
+        "email": "franziska@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Margherita",
+        "size": "L"
+    },
+    {
+        "name": "Bernd",
+        "email": "bernd@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Salami",
+        "size": "S"
+    },
+    {
+        "name": "Manuel",
+        "email": "manuel@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Margherita",
+        "size": "L"
+    },
+    {
+        "name": "Frederick",
+        "email": "frederick@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Diavolo",
+        "size": "L"
+    },
+    {
+        "name": "Susanne",
+        "email": "susanne@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Margherita",
+        "size": "M"
+    },
+    {
+        "name": "Jennifer",
+        "email": "jenni@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Margherita",
+        "size": "L"
+    },
+    {
+        "name": "Paul",
+        "email": "paul@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Diavolo",
+        "size": "S"
+    },
+    {
+        "name": "Tina",
+        "email": "tina@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Diavolo",
+        "size": "M"
+    }
+]
