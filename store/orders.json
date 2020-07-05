@@ -89,5 +89,12 @@
         "phone_number": "+49166284928",
         "pizza": "Diavolo",
         "size": "M"
+    },
+    {
+        "name": "Sabrina",
+        "email": "sabrina@mail.com",
+        "phone_number": "+49166284928",
+        "pizza": "Margherita",
+        "size": "M"
     }
 ]
