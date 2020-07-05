@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pizzapp.apps.PizzappConfig',
     'phonenumber_field',
     'crispy_forms',
+    'django_filters',
 ]
 
 MIDDLEWARE = [

@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.core.mail import BadHeaderError
 from django.views.generic import ListView
 
+from .filters import OrderFilter
 from .forms import OrderForm
 from .models import Order, Pizza
 
@@ -15,7 +16,13 @@ class OrderListView(ListView):
     model = Order
     context_object_name = 'orders'
     queryset = Order.objects.all()
-    paginate_by = 12
+    # paginate_by = 12
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter'] = OrderFilter(self.request.GET, queryset=self.get_queryset())
+        return context
+
 
 def home(request):
     return render(request, 'pizzapp/home.html', {})
