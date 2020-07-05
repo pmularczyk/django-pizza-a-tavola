@@ -30,9 +30,14 @@ body {
 #home {
     margin-top: 78px;
 }
+
+/* Impressum */
+.impressum-title {
+    margin-left: 32px;
+}
 /* Footer */
 #footer .container {
-    padding: 3% 5%;
+    padding: 3% 3%;
 }
 #footer .social {
     float: right;
